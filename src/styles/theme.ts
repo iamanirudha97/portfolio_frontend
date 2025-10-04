@@ -43,7 +43,7 @@ export const theme = {
     
     // Background colors
     bg: {
-      primary: '#1e1e1e',    // Main site background
+      primary: '#000000',    // Main site background
       secondary: '#222222',  // Used for Gear items and photo card backs
       tertiary: '#818CF8',   // Used for hover states and borders
     },
@@ -65,7 +65,7 @@ export const theme = {
     // Navigation
     nav: {
       bg: 'rgba(0, 0, 0, 0.8)',  // Navbar background with transparency
-      bubble: '#222222',          // Used for Spotify tab buttons and nav indicators
+      bubble: '#333333',          // Used for Spotify tab buttons and nav indicators
       text: '#9CA3AF',            // Navbar text color
       textHover: '#F9FAFB',       // Navbar text hover color
     }
