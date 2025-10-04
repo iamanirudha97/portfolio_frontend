@@ -12,9 +12,7 @@ const Navbar = () => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(location.pathname);
   const currentTheme = isDarkMode ? theme.dark : theme.light;
-
-  console.log(currentTheme)
-
+  
   useEffect(() => {
     setActiveTab(location.pathname);
   }, [location]);
@@ -29,7 +27,7 @@ const Navbar = () => {
   return (
     <header className="w-full backdrop-blur-sm">
       <nav className="container-width py-4">
-        <div className="flex items-center justify-evenly">
+        <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src={logo}

@@ -30,7 +30,7 @@
 
 @layer components {
   .container-width {
-    @apply max-w-7xl mx-auto px-4 sm:px-6;
+    @apply max-w-3xl mx-auto px-4 sm:px-6;
   }
 
   .section {
