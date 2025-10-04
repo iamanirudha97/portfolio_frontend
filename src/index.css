@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities; */
 
-/* @layer base {
+@layer base {
   html {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
@@ -71,4 +71,4 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
-}  */
+}
