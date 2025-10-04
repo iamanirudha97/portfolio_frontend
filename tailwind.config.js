@@ -52,7 +52,7 @@ export default {
     // Nav bubble colors
     'bg-gray-100',
     'dark:bg-gray-800',
-    'hover:bg-gray-200',
-    'dark:hover:bg-gray-700'
+    'hover:bg-gray-800',
+    'dark:hover:bg-gray-900'
   ],
 } 
