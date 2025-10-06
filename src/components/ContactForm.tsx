@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +16,6 @@ export default function ContactForm() {
 
   const specialNames = ["sharvil", "soham", "mohit", "daryl", "shivam", "ashay"];
 
-  // Dynamically decide which image to load after submission
   useEffect(() => {
     if (submitted) {
       const name = formData.name.trim().toLowerCase();
@@ -58,11 +57,12 @@ export default function ContactForm() {
     }),
   };
 
+  // bg-[#F8F8F8]/90 dark:bg-black/40 
   return (
     <motion.div
-      className="max-w-2xl mx-auto p-6 rounded-2xl 
+      className="max-w-2xl mx-auto p-4 rounded-2xl 
              border border-gray-200 dark:border-gray-800 
-             bg-[#F8F8F8]/90 dark:bg-black/40 
+             bg-[##FFFDF7]/90 dark:bg-black/40 
              backdrop-blur-md 
              shadow-[0_4px_16px_rgba(0,0,0,0.02)] 
              dark:shadow-[0_4px_24px_rgba(0,0,0,0.4)] 
@@ -99,7 +99,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 
-                           bg-gray-50 dark:bg-black/30 
+                           bg-[#FAFAFA] dark:bg-black/30 
                            border border-gray-300 dark:border-gray-700 
                            text-gray-900 dark:text-gray-200 
                            rounded-lg 
@@ -120,7 +120,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 
-                           bg-gray-50 dark:bg-black/30 
+                           bg-[#FAFAFA] dark:bg-black/30 
                            border border-gray-300 dark:border-gray-700 
                            text-gray-900 dark:text-gray-200 
                            rounded-lg 
@@ -142,8 +142,8 @@ export default function ContactForm() {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 
-                         bg-gray-50 dark:bg-black/30 
+              className="w-full px-2 py-2 
+                         bg-[#FAFAFA] dark:bg-black/30 
                          border border-gray-300 dark:border-gray-700 
                          text-gray-900 dark:text-gray-200 
                          rounded-lg 
@@ -165,7 +165,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 
-                         bg-gray-50 dark:bg-black/30 
+                         bg-[#FAFAFA] dark:bg-black/30 
                          border border-gray-300 dark:border-gray-700 
                          text-gray-900 dark:text-gray-200 
                          rounded-lg 
@@ -253,3 +253,5 @@ export default function ContactForm() {
     </motion.div>
   );
 }
+
+export default ContactForm;

@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import React, { useState, useEffect } from 'react';
-import { theme } from '../styles/theme';
 import logo from "../assets/anirudha-svg.png";
 import kizaru from "../assets/kizaru.webp"
 import drake from "../assets/drake.jpeg"
@@ -11,7 +10,6 @@ const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(location.pathname);
-  const currentTheme = isDarkMode ? theme.dark : theme.light;
   
   useEffect(() => {
     setActiveTab(location.pathname);
@@ -25,9 +23,9 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full backdrop-blur-sm">
-      <nav className="container-width py-4">
-        <div className="flex items-center justify-between">
+    <header className="sticky top-0 z-50 w-full bg-transparent">
+      <nav className="container-width-navbar py-3">
+        <div className="mx-auto rounded-full bg-white/10 dark:bg-white/10 backdrop-blur-xs ring-1 ring-black/5 dark:ring-white/10 shadow-lg flex items-center justify-between px-3 sm:px-6 py-2 sm:py-3">
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src={logo}
@@ -36,7 +34,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center gap-2 sm:gap-4">
             {navItems.map((item) => (
               
               <Link
@@ -49,14 +47,15 @@ const Navbar = () => {
               // >
               className={`px-3 py-2 text-sm rounded-lg transition-colors relative ${
                   activeTab === item.path
-                    ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    ? 'text-gray-900 dark:text-white'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
                 {item.label}
                 {activeTab === item.path && (
                   <motion.div
                     className="absolute inset-0 rounded-lg -z-10"
-                    style={{ backgroundColor: currentTheme.nav.bubble }}
+                    style={{ backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.55)' }}
                     layoutId="bubble"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />

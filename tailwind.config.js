@@ -46,7 +46,7 @@ export default {
 
     // Project tech tag colors - solid backgrounds
     {
-      pattern: /bg-(blue|cyan|green|emerald|sky|purple|neutral|indigo|violet|amber|red|yellow|black|orange)-500/,
+      pattern: /bg-(blue|cyan|green|emerald|sky|purple|neutral|indigo|violet|amber|red|yellow|black|orange|fuchsia)-500/,
     },
 
     // Nav bubble colors
