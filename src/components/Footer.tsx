@@ -12,6 +12,18 @@ const Footer = () => {
       ),
     },
     {
+      name: 'Chess.com',
+      url: 'https://www.chess.com/member/iamnotanirudha',
+      icon: (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <circle cx="12" cy="7" r="3" />
+          <path d="M8 14c0-2.209 1.791-4 4-4s4 1.791 4 4H8z" />
+          <rect x="7" y="14" width="10" height="2" rx="1" />
+          <rect x="6" y="17" width="12" height="2" rx="1" />
+        </svg>
+      ),
+    },
+    {
       name: 'YouTube',
       url: 'https://www.youtube.com/@iamnotanirudha',
       icon: (
@@ -60,7 +72,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="p-4 border-t-2 border-slate-200 dark:border-slate-900">
+    <footer className="p-3 border-t-2 border-slate-200 dark:border-slate-900">
       <div className="container-width">
         <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-wrap items-center justify-center gap-6 px-4">
