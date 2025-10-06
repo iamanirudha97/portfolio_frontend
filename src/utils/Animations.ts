@@ -39,7 +39,6 @@ export const cardVariants = {
       x: 4,
       transition: {
         type: "tween",
-        ease: "easeOut",
         duration: 0.2
       }
     }

@@ -53,7 +53,7 @@ const ContactForm = () => {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
+      transition: { delay: i * 0.1, duration: 0.4 },
     }),
   };
 
@@ -69,7 +69,7 @@ const ContactForm = () => {
              transition-colors duration-300"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6 }}
     >
       <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
         Send me a message
@@ -89,12 +89,13 @@ const ContactForm = () => {
             className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             <div>
-              <label className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
+              <label htmlFor="name" className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
                 Name
               </label>
               <input
                 type="text"
                 name="name"
+                id="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -110,12 +111,13 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
+              <label htmlFor="email" className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
                 Email
               </label>
               <input
                 type="email"
                 name="email"
+                id="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -133,12 +135,13 @@ const ContactForm = () => {
 
           {/* Subject */}
           <motion.div custom={1} variants={inputVariants} initial="hidden" animate="visible">
-            <label className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
+            <label htmlFor="subject" className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
               Subject
             </label>
             <input
               type="text"
               name="subject"
+              id="subject"
               value={formData.subject}
               onChange={handleChange}
               required
@@ -155,11 +158,12 @@ const ContactForm = () => {
 
           {/* Message */}
           <motion.div custom={2} variants={inputVariants} initial="hidden" animate="visible">
-            <label className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
+            <label htmlFor="message" className="block text-sm text-gray-700 dark:text-gray-400 mb-1">
               Message
             </label>
             <textarea
               name="message"
+              id="message"
               rows={5}
               value={formData.message}
               onChange={handleChange}

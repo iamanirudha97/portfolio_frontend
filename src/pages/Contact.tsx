@@ -14,7 +14,6 @@ const Contact = () => {
       y: -2,
       transition: {
         duration: 0.2,
-        ease: [0.4, 0, 0.2, 1]
       }
     }
   };
@@ -26,7 +25,6 @@ const Contact = () => {
       rotate: 5,
       transition: {
         duration: 0.2,
-        ease: [0.4, 0, 0.2, 1]
       }
     }
   };
