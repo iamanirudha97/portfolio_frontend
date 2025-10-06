@@ -41,6 +41,7 @@ export const HeroSection = () => {
             <motion.div
               className="grid grid-cols-1 sm:grid-cols-[90px_1fr] gap-1 sm:gap-4 cursor-default"
               variants={sectionVariants}
+              whileHover="hover"
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
               style={{

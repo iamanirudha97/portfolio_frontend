@@ -1,3 +1,5 @@
+import type { Variants } from "framer-motion";
+
 export const cardVariants = {
     hidden: {
       x: -300,
@@ -32,7 +34,7 @@ export const cardVariants = {
         duration: 0.4
       }
     }
-  };
+  } as const satisfies Variants;
   
   export const titleVariants = {
     hover: {
@@ -42,7 +44,7 @@ export const cardVariants = {
         duration: 0.2
       }
     }
-  };
+  } as const satisfies Variants;
   
   export const containerVariants = {
     hover: {
