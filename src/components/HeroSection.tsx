@@ -27,7 +27,7 @@ export const HeroSection = () => {
       {sections.map((section, index) => (
         <FadeInSection key={section.title}>
           <motion.section
-            className="space-y-1 rounded-xl overflow-hidden cursor-default"
+            className="space-y-1 rounded-xl overflow-visible cursor-default"
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: hoveredIndex === null || hoveredIndex === index ? 1 : 0.5,

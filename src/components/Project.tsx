@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { Portal } from '../utils/Portal';
 
 interface ProjectProps {
   project: {
@@ -12,9 +10,6 @@ interface ProjectProps {
 }
 
 export const Project = ({ project }: ProjectProps) => {
-  const [isHovering, setIsHovering] = useState(true);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
   // Static mapping so Tailwind can see and generate the classes at build-time
   const COLOR_BG_CLASS: Record<string, string> = {
     blue: 'bg-blue-500',
@@ -32,16 +27,6 @@ export const Project = ({ project }: ProjectProps) => {
     red: 'bg-red-500',
     black: 'bg-black',
   };
-
-  const handleMouseMove = (event: React.MouseEvent) => {
-    setPosition({ x: event.clientX, y: event.clientY });
-  };
-
-  useEffect(() => {
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove as any);
-    };
-  }, []);
 
   return (
     <div className="relative overflow-visible">
@@ -75,24 +60,6 @@ export const Project = ({ project }: ProjectProps) => {
           </div>
         </div>
       </motion.a>
-
-      {isHovering && (
-        <Portal>
-          <div
-            className="fixed pointer-events-none"
-            style={{
-              position: 'fixed',
-              left: position.x,
-              top: position.y,
-              transform: 'translate(-50%, -120%)',
-              width: '200px',
-              height: '120px',
-              zIndex: 9999,
-            }}
-          >
-          </div>
-        </Portal>
-      )} 
     </div>
   );
 };
