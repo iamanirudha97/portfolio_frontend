@@ -37,7 +37,7 @@ const pageVariants = {
 function App() {
   const location = useLocation();
   const [showFooter, setShowFooter] = useState(false);
-
+  
   useEffect(() => {
     setShowFooter(false)
 
