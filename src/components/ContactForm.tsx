@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import nikalImg from "../assets/nikal.jpeg";
+import thankyouImg from "../assets/thankyou.jpeg";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,20 +16,14 @@ const ContactForm = () => {
   const [imageError, setImageError] = useState(false);
   const [imageSrc, setImageSrc] = useState<string | null>(null);
 
-  const specialNames = ["sharvil", "soham", "mohit", "daryl", "shivam", "ashay"];
+  const specialNames = ["sharvil", "soham", "mohit", "daryl", "shivam", "ashay", "sharvil wadekar", "soham mane", "mohit kamble", "daryl fernandes", "shivam lahoti", "ashay saoji"];
 
   useEffect(() => {
     if (submitted) {
       const name = formData.name.trim().toLowerCase();
       const shouldShowNikal = specialNames.includes(name);
-
-      const imgPath = shouldShowNikal
-        ? "../assets/nikal.jpeg"
-        : "../assets/thankyou.jpeg";
-
-      import(/* @vite-ignore */ imgPath)
-        .then((img) => setImageSrc(img.default))
-        .catch(() => setImageError(true));
+      const src = shouldShowNikal ? nikalImg : thankyouImg;
+      setImageSrc(src);
     }
   }, [submitted]);
 
