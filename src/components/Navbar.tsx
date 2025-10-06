@@ -94,7 +94,7 @@ const Navbar = () => {
 
             {/* Tooltip */}
             <span className="absolute top-8 mb-2 hidden w-max rounded-md bg-gray-900 px-2 py-1 text-xs text-white group-hover:block">
-              {isDarkMode ? <React.Fragment><img src={kizaru} className='h-32 w-48'/> Brace Yourself !! </React.Fragment> : <React.Fragment><img src={drake} className='h-32 w-48'/> come to the dark side xD </React.Fragment>}
+              {isDarkMode ? <React.Fragment><img src={kizaru} alt="Kizaru illustration" className='h-32 w-48'/> Brace Yourself !! </React.Fragment> : <React.Fragment><img src={drake} alt="Drake meme" className='h-32 w-48'/> come to the dark side xD </React.Fragment>}
             </span>
           </div>
         </div>

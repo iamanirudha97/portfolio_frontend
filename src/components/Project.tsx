@@ -12,7 +12,7 @@ interface ProjectProps {
 }
 
 export const Project = ({ project }: ProjectProps) => {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState(true);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   // Static mapping so Tailwind can see and generate the classes at build-time
@@ -35,16 +35,6 @@ export const Project = ({ project }: ProjectProps) => {
 
   const handleMouseMove = (event: React.MouseEvent) => {
     setPosition({ x: event.clientX, y: event.clientY });
-  };
-
-  const showPreview = () => {
-    setIsHovering(true);
-    document.addEventListener('mousemove', handleMouseMove as any);
-  };
-
-  const hidePreview = () => {
-    setIsHovering(false);
-    document.removeEventListener('mousemove', handleMouseMove as any);
   };
 
   useEffect(() => {
@@ -102,7 +92,7 @@ export const Project = ({ project }: ProjectProps) => {
           >
           </div>
         </Portal>
-      )}
+      )} 
     </div>
   );
 };
