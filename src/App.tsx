@@ -55,7 +55,7 @@ function App() {
         <Navbar />
 
         <main className='flex-grow'>
-          <div className='container-width section'>
+          <div className='container-width mx-auto section'>
             <AnimatePresence mode='wait'>
               <motion.div
                 key={location.pathname}

@@ -1,7 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { FadeInSection } from '../utils/FadeInSection';
-import { useEffect, useState } from "react";
 import ContactForm from '../components/ContactForm';
 
 
@@ -54,13 +53,13 @@ const Contact = () => {
 
 
   return (
-    <div>
+    <div className='max-w-3xl mx-auto'>
       <FadeInSection>
-        <motion.h1 className="text-3xl font-bold">
+        <motion.h1 className="text-3xl">
           Contact
         </motion.h1>
-        <motion.p className="text-sm sm:text-base leading-relaxed mb-6">
-          Let's connect.
+        <motion.p className="text-sm sm:text-base leading-relaxed pt-2 mb-6">
+          Bring the problem, I’ll bring the roadmap.
         </motion.p>
       </FadeInSection>
 

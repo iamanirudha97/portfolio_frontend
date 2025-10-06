@@ -60,7 +60,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mb-5">
+    <footer className="p-4 border-t-2 border-slate-200 dark:border-slate-900">
       <div className="container-width">
         <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-wrap items-center justify-center gap-6 px-4">
