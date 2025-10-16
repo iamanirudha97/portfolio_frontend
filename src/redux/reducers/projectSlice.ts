@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import { serverHost } from "../../services/api";
 
 interface Project {
     id: number;
@@ -54,7 +55,7 @@ const projectSlice = createSlice({
 export const fetchProjects = createAsyncThunk<Project[]>(
     'project/fetchAll',
     async () => {
-        const res = await fetch('http://localhost:8000/get-all-projects');
+        const res = await fetch(`${serverHost}/get-all-projects`);    
         if (!res.ok) throw new Error('Network error');
         const data = await res.json();
         return data as Project[];

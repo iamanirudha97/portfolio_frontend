@@ -7,6 +7,9 @@ import { ThemeProvider } from './context/ThemeContext';
 import { Layout } from './components/Layout';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from './redux/store';
+import { fetchProjects } from './redux/reducers/projectSlice';
 import Project from './pages/Project';
 import { AnimatePresence, motion } from 'framer-motion';
 import ScrollToTop from './utils/ScrollToTop';
@@ -34,10 +37,18 @@ const pageVariants = {
   },
 };
 
+
+
+
 function App() {
   const location = useLocation();
   const [showFooter, setShowFooter] = useState(false);
+  const dispatch = useDispatch<AppDispatch>();
   
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
   useEffect(() => {
     setShowFooter(false)
 
