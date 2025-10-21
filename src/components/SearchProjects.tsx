@@ -17,7 +17,7 @@ const SearchProjects = () => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-center text-4xl sm:text-5xl font-extrabold">
+      <h2 className="text-center text-2xl sm:text-5xl font-medium">
         <span className="text-gray-900 dark:text-white"> My </span>
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-500 to-fuchsia-500 dark:from-indigo-400 dark:via-violet-400 dark:to-fuchsia-400">Projects</span>
       </h2>

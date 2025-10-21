@@ -32,8 +32,8 @@ const Contact = () => {
   return (
     <div className='max-w-3xl mx-auto'>
       <FadeInSection>
-        <motion.h1 className="text-2xl">
-          Contact
+        <motion.h1 className="text-4xl sm:text-5xl">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-500 to-fuchsia-500 dark:from-indigo-400 dark:via-violet-400 dark:to-fuchsia-400">Contact</span>
         </motion.h1>
         <motion.p className="text-sm sm:text-base leading-relaxed pt-2 mb-5">
           Bring the problem, I’ll bring the roadmap.
