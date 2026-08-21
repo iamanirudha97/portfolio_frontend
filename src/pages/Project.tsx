@@ -13,7 +13,7 @@ const Project = () => {
             {error ? (
                 <div className="pt-20 pb-10 flex flex-col items-center justify-center text-center px-4">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Site still under construction</h2>
-                    <p className="mt-2 text-gray-600 dark:text-gray-400">We encountered an issue fetching the projects.</p>
+                    <p className="mt-2 text-gray-600 dark:text-gray-400">Stay tuned for Updates!! </p>
                 </div>
             ) : (
                 <>
