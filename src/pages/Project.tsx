@@ -4,25 +4,34 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
 
 const Project = () => {
-    const { items } = useSelector((s: RootState) => s.project);
+    const { items, error } = useSelector((s: RootState) => s.project);
     const hasData = items && items.length > 0;
 
     return (
         <div>
             <SearchProjects />
-            <div className="grid grid-cols-1 gap-4 pt-6">
-                {hasData
-                  ? items.slice(0, 6).map((p: any) => (
-                      <ProjectCard key={p.id} project={p} />
-                    ))
-                  : Array.from({ length: 6 }, (_, i) => `skeleton-${i}`).map((key) => (
-                      <SkeletonCard key={key} />
-                    ))}
-            </div>
-            <div className="mt-4 flex items-center justify-center gap-2">
-                <button className="px-3 py-1.5 rounded-lg ring-1 ring-gray-300 dark:ring-white/10">Prev</button>
-                <button className="px-3 py-1.5 rounded-lg ring-1 ring-gray-300 dark:ring-white/10">Next</button>
-            </div>
+            {error ? (
+                <div className="pt-20 pb-10 flex flex-col items-center justify-center text-center px-4">
+                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Site still under construction</h2>
+                    <p className="mt-2 text-gray-600 dark:text-gray-400">We encountered an issue fetching the projects.</p>
+                </div>
+            ) : (
+                <>
+                    <div className="grid grid-cols-1 gap-4 pt-6">
+                        {hasData
+                            ? items.slice(0, 6).map((p: any) => (
+                                <ProjectCard key={p.id} project={p} />
+                            ))
+                            : Array.from({ length: 6 }, (_, i) => `skeleton-${i}`).map((key) => (
+                                <SkeletonCard key={key} />
+                            ))}
+                    </div>
+                    <div className="mt-4 flex items-center justify-center gap-2">
+                        <button className="px-3 py-1.5 rounded-lg ring-1 ring-gray-300 dark:ring-white/10">Prev</button>
+                        <button className="px-3 py-1.5 rounded-lg ring-1 ring-gray-300 dark:ring-white/10">Next</button>
+                    </div>
+                </>
+            )}
         </div>
     )
 }
