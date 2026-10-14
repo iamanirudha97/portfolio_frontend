@@ -136,14 +136,14 @@ export const sections = [
             company: "Code The Dream",
             date: "March 2025 - Present",
             title: "Software Engineer",
-            description: ["Working on AI features for Edtech and mentoring students "],
+            description: ["Working on Data Engineering for Edtech and mentoring students "],
             dotColor: "bg-pink-500"
           },
           {
-            company: "CareerGPT",
+            company: "Cernuvo (previously CareerGPT)",
             date: "Dec 2024 - May 2025",
             title: "Software Engineer Coop",
-            description: ["Worked on developing AI Agents in HR-tech."],
+            description: ["Worked on developing cool features in HR-tech."],
             dotColor: "bg-green-500"
           },
           {
@@ -155,9 +155,9 @@ export const sections = [
           },
           {
             company: "CMP Infotech",
-            date: "June 2020 - Aug 2020",
-            title: "Software Development Engineer Intern",
-            description: ["Worked on streamlining the checkout flow to reduce cart abandonment rates and lift completed purchase rates."],
+            date: "August 2021 - July 2023",
+            title: "Software Engineer",
+            description: ["Worked on streamlining the data flow and building cool backend systems."],
             dotColor: "bg-blue-500"
           },
           {
